@@ -34,6 +34,7 @@ function clearEnemies()
     for index, sprite in ipairs(allSprites) do
         if sprite:isa(FoodDrops) then
             sprite:remove()
+            saveScore(getScore())
         end        
     end
 end
