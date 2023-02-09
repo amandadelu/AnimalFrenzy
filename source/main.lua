@@ -12,16 +12,19 @@ local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
 function resetGame()
+	loadHighscore()
 	resetScore()
 	clearEnemies()
 	stopSpawner()
 	startSpawner()
 end
 
+loadHighscore()
 createScoreDisplay()
 Player(200, 220)
 --FoodDrops(200, 60, 1)
 startSpawner()
+
 
 local playerSprite = nil
 
