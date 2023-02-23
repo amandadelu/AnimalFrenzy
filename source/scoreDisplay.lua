@@ -1,38 +1,38 @@
 local pd <const> = playdate
 local gfx <const> = pd.graphics
-
 local scoreSprite
-local score
-local highScore
 
 function createScoreDisplay()
-scoreSprite = gfx.sprite.new()
-score = 0
-highScore = 0
-scoreSprite:setCenter(0,0)
-scoreSprite:moveTo(220, 4)
-scoreSprite:add()
+    -- Current score sprite
+    scoreSprite = gfx.sprite.new()
+    score = 0
+    scoreSprite:setCenter(0, 0)
+    scoreSprite:moveTo(320, 4)
+    scoreSprite:add()
 end
 
 function updateDisplay()
-local scoreText = "Score: " .. score .. " High Score: " .. highScore
-local textWidth, textHeight = gfx.getTextSize(scoreText)
-local scoreImage = gfx.image.new(textWidth, textHeight)
-gfx.pushContext(scoreImage)
-gfx.drawText(scoreText, 0, 0)
-gfx.popContext()
-scoreSprite:setImage(scoreImage)
+    -- Current score
+    local scoreText = 'Score: ' .. score
+    local textWidth, textHeight = gfx.getTextSize(scoreText)
+    local scoreImage = gfx.image.new(textWidth, textHeight)
+    gfx.pushContext(scoreImage)
+        gfx.drawText(scoreText, 0, 0)
+    gfx.popContext()
+    scoreSprite:setImage(scoreImage)
 end
 
 function incrementScore()
-score += 1
-if score > highScore then
-highScore = score
-end
-updateDisplay()
+    -- Updates the score
+    score += 1
+    updateDisplay()
 end
 
 function resetScore()
-score = 0
-updateDisplay()
+    score = 0
+    updateDisplay()
+end
+
+function getScore()
+    return score
 end

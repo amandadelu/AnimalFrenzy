@@ -2,6 +2,7 @@ import "fooddrops"
 
 local pd <const> = playdate
 local gfx <const> = pd.graphics
+local persistence = pd.persistence
 
 local spawnTimer
 
