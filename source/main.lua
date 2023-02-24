@@ -17,16 +17,17 @@ local gfx <const> = playdate.graphics
 setStartingScene()
 
 function resetGame()
+	loadHighscore()
 	resetScore()
 	clearEnemies()
 	stopSpawner()
 	startSpawner()
 end
 
-createScoreDisplay()
-Player(200, 220)
+--createScoreDisplay() --moving this to sceneController game scene
+--Player(200, 220) --moving this to the sceneController game scene
 --FoodDrops(200, 60, 1)
-startSpawner()
+--startSpawner() --moving this to the sceneController game scene
 
 local playerSprite = nil
 

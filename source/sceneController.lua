@@ -38,13 +38,16 @@ function clearSprites()
     gameState = 'game'
     clearSprites()
    
-  
+    Player(200, 220)
+    createScoreDisplay()
+    startSpawner()
     setBackground('clouds1')
  end
   
  -- Sets up the game over scene
  function setGameOverScene()
     gameState = 'game over'
+    
     clearSprites()
     setBackground('spritesheet1')
  end

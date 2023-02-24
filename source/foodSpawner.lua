@@ -34,6 +34,7 @@ function clearEnemies()
     local allSprites = gfx.sprite.getAllSprites()
     for index, sprite in ipairs(allSprites) do
         if sprite:isa(FoodDrops) then
+            setGameOverScene()
             sprite:remove()
         end        
     end

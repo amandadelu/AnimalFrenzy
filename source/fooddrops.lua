@@ -20,7 +20,9 @@ end
 function FoodDrops:update()
     self:moveBy(0, self.moveSpeed)
     if self.y > 240 then
-        resetGame()
+        --resetGame()
+        saveScore(getScore())
+        setGameOverScene()
     end
 end
 
