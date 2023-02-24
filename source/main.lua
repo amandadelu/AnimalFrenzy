@@ -7,9 +7,14 @@ import "player"
 --import "fooddrops"
 import "scoreDisplay"
 import "foodSpawner"
+import "globals"
+import "sceneController"
+import "playGameButton"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
+
+setStartingScene()
 
 function resetGame()
 	resetScore()
@@ -24,6 +29,18 @@ Player(200, 220)
 startSpawner()
 
 local playerSprite = nil
+
+
+--local backgroundImage = gfx.image.new("images/spritesheet1")
+--gfx.sprite.setBackgroundDrawingCallback(
+	--function(x, y, width, height)
+		--gfx.setClipRect(x,y,width, height)
+		--backgroundImage:draw(0,0)
+		--gfx.clearClipRect()
+	--end
+--)
+
+
 
 function playdate.update()
 	gfx.sprite.update()
