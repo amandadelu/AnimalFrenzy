@@ -47,7 +47,8 @@ function clearSprites()
  -- Sets up the game over scene
  function setGameOverScene()
     gameState = 'game over'
+    stopSpawner()
     
     clearSprites()
-    setBackground('spritesheet1')
+    setBackground('endgame2')
  end
