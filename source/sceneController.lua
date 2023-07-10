@@ -41,13 +41,14 @@ function clearSprites()
     Player(200, 220)
     createScoreDisplay()
     startSpawner()
-    setBackground('clouds1')
+    setBackground('backgroundEmpty')
  end
   
  -- Sets up the game over scene
  function setGameOverScene()
     gameState = 'game over'
     stopSpawner()
+    --showFinalScore()
     
     clearSprites()
     setBackground('endgame2')

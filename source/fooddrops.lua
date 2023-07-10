@@ -4,7 +4,7 @@ local gfx <const> = pd.graphics
 class('FoodDrops').extends(gfx.sprite)
 
 function FoodDrops:init(x, y, moveSpeed)
-    local foodImage = gfx.image.new("images/goblin")
+    local foodImage = gfx.image.new("images/pizza2")
     self:setCollideRect(0,0, 30, 30)
     self:setImage(foodImage)
     self:moveTo(x, y)

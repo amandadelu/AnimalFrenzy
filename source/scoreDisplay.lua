@@ -4,7 +4,7 @@ local scoreSprite
 local highscoreSprite
 local highscore
 local scoreTable
-
+local finalScoreSprite
 -- If there is a highscore stored, it loads it to the game, otherwise it initialises it to zero
 function loadHighscore()
     scoreTable = playdate.datastore.read('scoreInfo')
@@ -74,3 +74,19 @@ end
 function getScore()
     return score
 end
+
+--function showFinalScore()
+    --Final score sprite
+    --finalScoreSprite = gfx.sprite.new()
+    --finalScoreSprite:setCenter(0,0)
+    --finalScoreSprite:moveTo(190, 110)
+    --finalScoreSprite:add()
+    --local finalScoreText = score
+    --local finalScoreTextWidth, finalScoreTextHeight = gfx.getTextSize(finalScoreSprite)
+    --local finalScoreImage = gfx.image.new(finalScoreTextWidth, finalScoreTextHeight)
+    --gfx.pushContext(finalScoreImage)
+        --Wrapping the text with astericks makes the text bold
+       -- gfx.drawText('*' .. finalScoreText .. '*', 0, 0)
+        --gfx.popContext()
+        --finalScoreSprite:setImage(finalScoreImage)
+--end

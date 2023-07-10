@@ -6,3 +6,6 @@ local gfx <const> = pd.graphics
 gameState = 'start'
 
 score = 0
+
+playerSpeedMultiplier = 1
+dropSpeedMultiplier = 1

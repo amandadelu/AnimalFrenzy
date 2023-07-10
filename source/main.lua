@@ -10,6 +10,7 @@ import "foodSpawner"
 import "globals"
 import "sceneController"
 import "playGameButton"
+import "powerUpSpawner"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -20,8 +21,11 @@ function resetGame()
 	loadHighscore()
 	resetScore()
 	clearEnemies()
+	clearPowerUps()
+	stopPowerUpSpawner()
 	stopSpawner()
 	startSpawner()
+	startPowerUpSpawner()
 end
 
 --createScoreDisplay() --moving this to sceneController game scene
