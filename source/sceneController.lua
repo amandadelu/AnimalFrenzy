@@ -29,8 +29,9 @@ function clearSprites()
     gameState = 'start'
     clearSprites()
   
-    PlayGameButton(200, 200)
-    setBackground('animalFrenzy2')
+    --PlayGameButton(200, 200)
+    setBackground('AnimalFrenzyz3')
+  
  end
   
  -- Sets up the game scene
