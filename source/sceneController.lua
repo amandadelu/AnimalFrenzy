@@ -52,5 +52,5 @@ function clearSprites()
     --showFinalScore()
     
     clearSprites()
-    setBackground('endgame2')
+    setBackground('YouLost2')
  end
