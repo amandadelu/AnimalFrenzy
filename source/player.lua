@@ -5,7 +5,7 @@ class('Player').extends(gfx.sprite)
 class('FoodDrops').extends(gfx.sprite)
 
 function Player:init(x, y)
-    local playerImage = gfx.image.new("images/santacat44") --change back to cat4 here TODO
+    local playerImage = gfx.image.new("images/cat4") --change back to cat4 here TODO
     self:setCollideRect(0,0,30, 30)
     self:setImage(playerImage)
     self:moveTo(x, y)
