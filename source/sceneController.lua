@@ -30,7 +30,7 @@ function clearSprites()
     clearSprites()
   
     --PlayGameButton(200, 200)
-    setBackground('AnimalFrenzyz3')
+    setBackground('CandyCaneAnimalFrenzy3333')
   
  end
   
@@ -52,5 +52,5 @@ function clearSprites()
     --showFinalScore()
     
     clearSprites()
-    setBackground('YouLost2')
+    setBackground('CandyCaneYouLost22')
  end
